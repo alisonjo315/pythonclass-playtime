@@ -1,18 +1,20 @@
-# Goal: Create a program that prints out an HTML drop down menu for all 50 states
+# Challenge Level: Beginner
+
+# Background: You have a text file with all of the US state names:
+#       states.txt: See section_07_(files).  
+#
+#       You also have a spreadsheet in comma separated value (CSV) format, state_info.csv.  See also section_07_(files)
+#       state_info.csv has the following columns: Population Rank, State Name, Population, US House Members, Percent of US Population
+
+# Challenge 1: Open states.txt and use the information to generate an HTML drop-down menu as in: https://github.com/shannonturner/python-lessons/blob/master/playtime/lesson02_states.py
 
 # Step 1: Define your list of states
 # These should all be strings, since they're names of places
-# Instead of having to type them all out, I really like liststates.com -- you can even customize the format it gives you the states in to make it super easy to copy/paste into your code here
 
-#states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District Of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','PALAU','Pennsylvania','PUERTO RICO','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
-#state_abbreviations = ['AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PW','PA','PR','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY']
-
-with open('../repo/section_07_(files)/states.csv','r') as states_file:
+with open('../../repo/section_07_(files)/states.csv','r') as states_file:
     states = states_file.read().split('\n')
 
 # Step 2: Create your loop
-# Essentially, you're telling Python: for each state in my list: print this HTML code
-# A good place to start is by printing the name of the state in the loop; after that you can add the HTML around it
 
 print '<select>' 
 
@@ -23,15 +25,27 @@ for index,state in enumerate(states):
 
 print '</select>'
 
+# Challenge 2: Save the HTML as states.html instead of printing it to screen.  
+# Your states.html should look identical (or at least similar) to the one you created in the Lesson 2 playtime, except you're getting the states from a file instead of a list.
 
+# Challenge 3: Using state_info.csv, create an HTML page that has a table for *each* state with all of the state details.
 
-# At line 14, we create the drop-down menu
-# At line 15, we create one drop-down item.  Each additional <option> that we add will add another item to our drop-down menu
-# At line 16, we tell HTML that we're done with the drop-down menu
+# Sample output:
 
-# Step 4: Test it!
-# Have Python print out the HTML code. Copy / paste it into a file, save that file as "states.html" and open that file in a web browser.
-# Later, when we learn file handling, we can skip the copy/paste step.
-# File handling can also let us create a file with the state names and abbreviations in it so we don't have to add it to our code.
+# <table border="1">
+# <tr>
+# <td colspan="2"> California </td>
+# </tr>
+# <tr>
+# <td> Rank: 1 </td>
+# <td> Percent: 11.91% </td>
+# </tr>
+# <tr>
+# <td> US House Members: 53 </td>
+# <td> Population: 38,332,521 </td>
+# </tr>
+# </table>
 
-# Your finished project should look something like: https://github.com/shannonturner/python-lessons/blob/master/section_05_(loops)/states.html
+# Challenge 4 (Not a Python challenge, but an HTML/Javascript challenge): When you make a choice from the drop-down menu, jump to that state's table.
+
+# Goal: Create a program that prints out an HTML drop down menu for all 50 states
