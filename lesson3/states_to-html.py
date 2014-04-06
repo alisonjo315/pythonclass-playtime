@@ -7,26 +7,26 @@
 #       state_info.csv has the following columns: Population Rank, State Name, Population, US House Members, Percent of US Population
 
 # Challenge 1: Open states.txt and use the information to generate an HTML drop-down menu as in: https://github.com/shannonturner/python-lessons/blob/master/playtime/lesson02_states.py
+# see ./states_to-screen.py
 
-# Step 1: Define your list of states
-# These should all be strings, since they're names of places
+# Challenge 2: Save the HTML as states.html instead of printing it to screen.  
+# Your states.html should look identical (or at least similar) to the one you created in the Lesson 2 playtime, except you're getting the states from a file instead of a list.
 
 with open('../../repo/section_07_(files)/states.csv','r') as states_file:
     states = states_file.read().split('\n')
 
-# Step 2: Create your loop
-
-print '<select>' 
+html= ''
+html += '<select>' 
 
 for index,state in enumerate(states):
     states[index] = states[index].split(',')
 
-    print '<option value="{0}">{1}</option>'.format(states[index][0],states[index][1])
+    html += '<option value="{0}">{1}</option>'.format(states[index][0],states[index][1])
 
-print '</select>'
+html += '</select>'
 
-# Challenge 2: Save the HTML as states.html instead of printing it to screen.  
-# Your states.html should look identical (or at least similar) to the one you created in the Lesson 2 playtime, except you're getting the states from a file instead of a list.
+with open('states.html','w') as newfile:
+    newfile.write(html)
 
 # Challenge 3: Using state_info.csv, create an HTML page that has a table for *each* state with all of the state details.
 
