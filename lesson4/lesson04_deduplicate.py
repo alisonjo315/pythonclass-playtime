@@ -62,7 +62,7 @@ aggregated_attendees = twolists_listify(film_attendees,hh_attendees)
 unique_attendees = list_deduplicafy(aggregated_attendees)
 #print len(unique_attendees) #19
 
-#print '\n'.join(unique_attendees)
+print 'Unique attendees: ({1})\n{0}\n'.format('\n'.join(unique_attendees),len(unique_attendees))
 
 # Goal 2: Who came to *both* your Film Screening and your Happy hour?
 
@@ -71,8 +71,10 @@ def match_findify(list1,list2):
     'Returns a list of items found in both lists.'
     #https://docs.python.org/2/library/stdtypes.html#set.intersection
     return list(set.intersection(set(list1), set(list2)))
+    #Note: Alternatively, could loop through one list and test like,
+    #if __item__ in __other-list__: add to in_both list.
 
 #Make a list of people who are in both lists.
 in_both = match_findify(film_attendees,hh_attendees)
 #print len(in_both) #5 -- matches 24-19, which is nice
-print '\n'.join(in_both)
+print 'Matching attendees: ({1})\n{0}'.format('\n'.join(in_both),len(in_both))
