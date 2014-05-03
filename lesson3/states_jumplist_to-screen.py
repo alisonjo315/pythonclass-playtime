@@ -14,16 +14,26 @@
 with open('../../repo/section_07_(files)/states.csv','r') as states_file:
     states = states_file.read().split('\n')
 
+#print "states after opening the file: "
+#print states
+#print "\n\n"
+
 # Step 2: Create your loop
 
 print '<select>' 
 
 for index,state in enumerate(states):
     states[index] = states[index].split(',')
+    #print "states[index] after splitting on comma: "
+    #print states[index]
 
     print '<option value="{0}">{1}</option>'.format(states[index][0],states[index][1])
 
 print '</select>'
+
+#print "\n\n"
+#print "states after splitting on commas, too: "
+#print states
 
 # Challenge 2: Save the HTML as states.html instead of printing it to screen.  
 # Your states.html should look identical (or at least similar) to the one you created in the Lesson 2 playtime, except you're getting the states from a file instead of a list.
