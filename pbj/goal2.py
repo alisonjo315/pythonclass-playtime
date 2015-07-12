@@ -1,3 +1,5 @@
+# Second Goal: Modify that program to tell you: if you can make a sandwich, how many you can make
+
 bread = 9
 pb = 5
 jam = 7
