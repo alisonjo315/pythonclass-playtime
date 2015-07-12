@@ -1,3 +1,5 @@
+# Third Goal: Modify that program to allow you to make open-face sandwiches if you have an odd number of slices of bread ( )
+
 bread = 9
 pb = 5
 jam = 7
