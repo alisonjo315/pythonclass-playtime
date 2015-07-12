@@ -6,10 +6,10 @@ jam = 7
 
 full_sandwiches = bread / 2
 
-if (full_sandwiches < pb) and (full_sandwiches < jam):
+if (full_sandwiches <= pb) and (full_sandwiches <= jam):
     least_ingr = "bread"
     least_num = full_sandwiches
-elif (pb < full_sandwiches) and (pb < jam):
+elif (pb <= full_sandwiches) and (pb <= jam):
     least_ingr = "pb"
     least_num = pb
 else:
