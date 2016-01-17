@@ -62,7 +62,7 @@ output += '</table>'
 print output
 
 # Goal 3: Write all of the HTML out to a file called contacts.html and open it in your browser.
-with open('lesson3_contacts_goal3.html','w') as contacts_file:
+with open('lesson03_contacts_goal3.html','w') as contacts_file:
 	contacts_file.write(output)
 
 # Goal 4: Instead of reading in the contacts from the dictionary above, read them in from contacts.csv, which you can find in lesson_07_(files).
