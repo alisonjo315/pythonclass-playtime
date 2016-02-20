@@ -25,10 +25,18 @@ print studybuddy_5[-5:]
     ## OR... could save each of the ZIP codes above as a variable so I don't have
     ## to write studybuddy_X[-5:] five times AGAIN in each of the next two goals...
 
+#######
+print '\n'
+#######
+
 # Goal 2: Modify your program to output all the ZIP codes on the same line, with an an explanatory sentence.
 # Sample output: (but use any language you want!)
 # Our study group included people from these ZIP codes: 13152, 13224, 13078, (etc).
 print 'Our study group included people from these ZIP codes: {0}, {1}, {2}, {3}, {4}.'.format(studybuddy_1[-5:], studybuddy_2[-5:], studybuddy_3[-5:], studybuddy_4[-5:], studybuddy_5[-5:])
+
+#######
+print '\n'
+#######
 
 # Goal 3: Modify your program to show each study buddy's first name and ZIP code.
 # Sample output: (again, use any language you want!)
